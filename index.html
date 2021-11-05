@@ -12,15 +12,16 @@
     <div id="title">Sound!</div>
     <div id="container">
         <br><br><br>
-        <input type="text" id="search" onkeydown = "if (event.keyCode == 13)
+        <input placeholder="Search" type="text" id="search" onkeydown = "if (event.keyCode == 13)
         search()" >
         <button onclick="search()" id="search-button"></button>
-        <br><br><br><br><br>
     </div>
-    <audio controls id="player" src="ball.mp3" type="audio/mpeg">
-        not working.
-    </audio>
-    
+    <div id="audio-container">
+        <audio controls id="player" src="ball.mp3" type="audio/mpeg">
+            not working.
+        </audio>
+
+    </div>
 </body>
 <script src="freesound.js"></script>
 </html>
