@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,14 @@
 </head>
 <body>
     
-    <input type="text" id="search" onkeydown = "if (event.keyCode == 13)
-    search()" >
-    <button onclick="search()">OK</button>
-    <br><br><br><br><br>
+    <div id="title">Sound!</div>
+    <div id="container">
+        <br><br><br>
+        <input type="text" id="search" onkeydown = "if (event.keyCode == 13)
+        search()" >
+        <button onclick="search()" id="search-button"></button>
+        <br><br><br><br><br>
+    </div>
     <audio controls id="player" src="ball.mp3" type="audio/mpeg">
         not working.
     </audio>

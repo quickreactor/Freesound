@@ -15,10 +15,17 @@ function search() {
     .then(data => {
         console.log(data)
         test = data;
-        var previewSrc = data.results[0].previews['preview-hq-mp3'];
+        random = randomIntFromInterval(0, data.results.length);
+        console.log(random);
+        var previewSrc = data.results[random].previews['preview-hq-mp3'];
         var audio = document.getElementById("player");
         audio.src = previewSrc;
         audio.load();
         //audio.play();
         });
 }
+
+
+function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
