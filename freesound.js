@@ -1,5 +1,5 @@
 const api = "https://freesound.org/apiv2/search/text/?query="
-const fields = "&fields=previews,duration"
+const fields = "&page_size=40&sort=score&fields=description,previews,duration"
 const token = "&token=ho6JWkyWgzhYRLzctaX7I77ThnsfDkvviuoarmxJ"
 
 
@@ -15,13 +15,13 @@ function search() {
     .then(data => {
         console.log(data)
         test = data;
-        random = randomIntFromInterval(0, data.results.length);
-        console.log(random);
+        random = randomIntFromInterval(0, data.results.length-1);
+        console.log(random, data.results[random].description);
         var previewSrc = data.results[random].previews['preview-hq-mp3'];
         var audio = document.getElementById("player");
         audio.src = previewSrc;
         audio.load();
-        //audio.play();
+        audio.play();
         });
 }
 
