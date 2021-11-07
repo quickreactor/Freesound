@@ -56,4 +56,16 @@ input {
 
   ul {
       font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      text-align: center;
+      list-style-type: none;
+      padding-right: 60px;
+  }
+
+  li {
+      color: crimson;
+  }
+
+  li span {
+      color: midnightblue;
   }
