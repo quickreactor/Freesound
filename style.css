@@ -53,3 +53,7 @@ input {
     color: black;
     opacity: 0.5; /* Firefox */
   }
+
+  ul {
+      font-family: 'Courier New', Courier, monospace;
+  }
